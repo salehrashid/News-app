@@ -49,6 +49,7 @@ class _CarouselWidgetState extends State<CarouselWidget> {
                 Positioned(
                   bottom: 30,
                   child: Container(
+                    width: 250,
                     padding: EdgeInsets.only(left: 10, right: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -57,12 +58,12 @@ class _CarouselWidgetState extends State<CarouselWidget> {
                           article.title,
                           style: titleArticleHeadline.copyWith(fontSize: 12),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Text(
-                          article.title,
-                          style: authorDateArticle.copyWith(fontSize: 10),
+                          article.author,
+                          style: authorDateArticleHeadline.copyWith(fontSize: 10),
                         )
                       ],
                     ),

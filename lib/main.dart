@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       //buat menghilangkan logo debug di pojok atas kanan emu
       debugShowCheckedModeBanner: false,
+      
         theme: ThemeData(
           primaryColor: Colors.blue,
         ),

@@ -29,8 +29,10 @@ class NewsItem extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
+            
+            //title dari artikel
             SizedBox(
-              width: 80,
+              width: 20,
             ),
             Expanded(
                 child: Column(
@@ -43,6 +45,8 @@ class NewsItem extends StatelessWidget {
                   style: titleArticle.copyWith(fontSize: 12),
                 ),
                 SizedBox(height: 10),
+
+                //calendar
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -54,7 +58,7 @@ class NewsItem extends StatelessWidget {
                         ),
                         const SizedBox(width: 3),
                         SizedBox(
-                          width: 70,
+                          width: 80,
                           child: Text(
                             time(DateTime.parse(article.publishedAt)),
                             maxLines: 1,
@@ -64,6 +68,8 @@ class NewsItem extends StatelessWidget {
                         )
                       ],
                     ),
+                   
+                    //nama author                   
                     Row(
                       children: [
                         Icon(
@@ -72,9 +78,9 @@ class NewsItem extends StatelessWidget {
                         ),
                         const SizedBox(width: 3),
                         SizedBox(
-                          width: 70,
+                          width: 100,
                           child: Text(
-                            time(DateTime.parse(article.author)),
+                            article.author,
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: authorDateArticle.copyWith(fontSize: 12),

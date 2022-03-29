@@ -15,7 +15,7 @@ class News {
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
       var result = data['articles'] as List;
-      list = result.map((json) => Article.fromJson(json)).toList();
+      list = result.map<Article>((json) => Article.fromJson(json)).toList();
       return list;
     } else {
       throw Exception('Tidak mengambil data dari berita');
@@ -30,7 +30,7 @@ class News {
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
       var result = data['articles'];
-      list = result.map((json) => Article.fromJson(json)).toList();
+      list = result.map<Article>((json) => Article.fromJson(json)).toList();
       return list;
     } else {
       throw Exception('Tidak mengambil data dari category');
