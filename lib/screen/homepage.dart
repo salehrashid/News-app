@@ -14,8 +14,6 @@ class HomePage extends StatelessWidget {
         leading: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6),
-            image: DecorationImage(
-              image: AssetImage('image/face.png'))
           ),
           width: 10,
           margin: const EdgeInsets.all(8),
